@@ -7,5 +7,40 @@
     <script src="script.js" defer></script>
     <title>Odin Library</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <h1>The Odin Library</h1>
+      <button class="btn" id="add-book">Add a book</button>
+    </header>
+    <main class="main">
+      <aside class="add-books">
+        <form action="#" class="form">
+          <h3 class="form__heading">Add a book</h3>
+          <div class="form__input-wrapper">
+            <input type="text" class="form__input" placeholder="Title" />
+          </div>
+          <div class="form__input-wrapper">
+            <input type="text" class="form__input" placeholder="Author" />
+          </div>
+          <div class="form__input-wrapper">
+            <input type="text" class="form__input" placeholder="Image Url" />
+          </div>
+          <div class="form__input-wrapper">
+            <input type="text" class="form__input" placeholder="Pages" />
+          </div>
+          <div class="form__input-wrapper form__checkbox">
+            <div>
+              <label for="read">Read</label>
+            </div>
+            <div><input type="checkbox" id="read" class="" /></div>
+          </div>
+
+          <div class="btn-wrapper">
+            <button class="btn form__btn" type="submit">Add to Library</button>
+          </div>
+        </form>
+      </aside>
+      <section class="books"></section>
+    </main>
+  </body>
 </html>

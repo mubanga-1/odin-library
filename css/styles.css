@@ -12,6 +12,8 @@ html {
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.7rem;
+    height: 100vh;
+    overflow: scroll;
 }
 
 h1 {
@@ -24,6 +26,24 @@ h2 {
 
 h3 {
     font-size: 2.1rem;
+}
+
+h1, h2, h3 {
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3.2rem;
+    }
+
+    h3 {
+        font-size: 2.6rem;
+    }
 }
 
 /* Cards */
@@ -50,4 +70,85 @@ h3 {
 
 .card__info {
     padding: 2rem 0 0;
+}
+
+/* Buttons */
+.btn {
+    font-size: 1.8rem;
+    background-color: rgb(1, 65, 130);
+    padding: 1rem 1.5rem;
+    color: #fff;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    height: 40px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+    border-bottom: 2px solid #010101;
+    position: fixed;
+    width: 100%;
+}
+
+/* Main content */
+.main {
+    height: 100%;
+}
+
+.add-books {
+    width: 20%;
+    position: fixed;
+    top: 115px;
+    right: 30px;
+    display: none;
+    border-left: 2px solid #010101;
+    height: 100%;;
+}
+
+/* Form */
+.form {
+    margin: 3rem auto; 
+    height: 300px;
+}
+
+.form__heading {
+    text-align: center;
+}
+
+.form__input-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: .5rem;
+}
+
+.form__checkbox {
+    align-items: center;
+    gap: .5rem
+}
+
+.form__input {
+    width: 80%;
+    padding: 1.2rem 1rem;
+    font-size: 1.6rem;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#read {
+    display: block;
+    margin-top: 3px;
+}
+
+.separator {
+    width: 50px;
+    height: 100%;
+    background-color: #010101;
 }
