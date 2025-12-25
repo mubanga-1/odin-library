@@ -150,7 +150,7 @@ h1, h2, h3 {
 .books {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    padding: 2rem 0 0 2rem;
-    width: 80%;
+    gap: 2rem;
+    padding: 2rem 2rem 0;
+    width: 100%;
 }

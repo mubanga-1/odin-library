@@ -18,26 +18,50 @@
         <form action="#" class="form">
           <h3 class="form__heading">Add a book</h3>
           <div class="form__input-wrapper">
-            <input type="text" class="form__input" placeholder="Title" />
+            <input
+              type="text"
+              class="form__input"
+              placeholder="Title"
+              id="title-input"
+            />
           </div>
           <div class="form__input-wrapper">
-            <input type="text" class="form__input" placeholder="Author" />
+            <input
+              type="text"
+              class="form__input"
+              placeholder="Author"
+              id="author-input"
+            />
           </div>
           <div class="form__input-wrapper">
-            <input type="text" class="form__input" placeholder="Image Url" />
+            <input
+              type="text"
+              class="form__input"
+              placeholder="Image Url"
+              id="url-input"
+            />
           </div>
           <div class="form__input-wrapper">
-            <input type="text" class="form__input" placeholder="Pages" />
+            <input
+              type="text"
+              class="form__input"
+              placeholder="Pages"
+              id="pages-input"
+            />
           </div>
           <div class="form__input-wrapper form__checkbox">
             <div>
               <label for="read">Read</label>
             </div>
-            <div><input type="checkbox" id="read" class="" /></div>
+            <div>
+              <input type="checkbox" id="read-input" />
+            </div>
           </div>
 
           <div class="btn-wrapper">
-            <button class="btn form__btn" type="submit">Add to Library</button>
+            <button class="btn form__btn" type="submit" id="submit-btn">
+              Add to Library
+            </button>
           </div>
         </form>
       </aside>

@@ -1,8 +1,11 @@
 const addBtn = document.querySelector("#add-book");
 const bookFormContainer = document.querySelector(".add-books");
+const booksWrapper = document.querySelector(".books");
+
 
 addBtn.addEventListener("click", () => {
     bookFormContainer.style.display = "block";
+    booksWrapper.style.width = "80%";
 });
 
 const myLibrary = [
@@ -19,9 +22,9 @@ function Book(title, author, imageUrl, pages, isRead) {
   this.isRead = isRead ? "Yes" : "No";
 }
 
-function addBookToLibrary(title, author, imageUrl, pages) {
+function addBookToLibrary(title, author, imageUrl, pages, isRead) {
   // take params, create a book then store it in the array
-    const newBook = new Book(title, author, imageUrl, pages)
+    const newBook = new Book(title, author, imageUrl, pages, isRead)
     myLibrary.push(newBook);
 }
 
@@ -47,8 +50,13 @@ function appendChildren(parent, children) {
     }
 }
 
+function removeChildren(parent, children) {
+    for (let child of children) {
+        parent.removeChild(child);
+    }
+}
+
 function displayBooks() {
-    const booksWrapper = document.querySelector(".books");
     const bookElements = [];
 
     for (let book of myLibrary) {
@@ -93,3 +101,28 @@ function displayBooks() {
 }
 
 displayBooks();
+
+const submitBtn = document.querySelector("#submit-btn");
+submitBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const newBookTitle = document.querySelector("#title-input").value;
+    const newBookAuthor = document.querySelector("#author-input").value; 
+    const newBookImageUrl = document.querySelector("#url-input").value;
+    const newBookPages = parseInt(document.querySelector("#pages-input").value);
+    const newBookIsRead = document.querySelector("#read-input").checked;
+
+    addBookToLibrary(
+        newBookTitle,
+        newBookAuthor,
+        newBookImageUrl,
+        newBookPages,
+        newBookIsRead,
+    );
+
+    removeChildren(booksWrapper, [...document.querySelectorAll(".books > *")]);
+    displayBooks();
+
+    bookFormContainer.style.display = "none";
+    booksWrapper.style.width = "100%";
+});
